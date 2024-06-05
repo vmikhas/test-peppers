@@ -1,0 +1,45 @@
+.toggle {
+  max-width: 1311px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.toggle__button {
+  width: 40px;
+  height: 40px;
+  background-color: $light-tomato;
+  background-image: url("../../images/icons/stack.svg#arrow_slider");
+  background-size: 8px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+
+  position: absolute;
+  top: 134px;
+
+  &:hover,
+  &:focus {
+    background-color: $tomato;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 102px;
+  }
+}
+
+.toggle__button--prev {
+  left: 10px;
+}
+
+.toggle__button--next {
+  right: 10px;
+
+  transform: rotateY(180deg);
+}

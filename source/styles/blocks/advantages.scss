@@ -1,0 +1,92 @@
+.advantages__container {
+  margin-top: 91px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 105px;
+  }
+}
+
+.advantages__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 17px;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 30px;
+  }
+}
+
+.advantages__item {
+  max-width: 510px;
+  width: 100%;
+  padding: 0 35px;
+
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  &--like {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#like");
+    }
+  }
+
+  &--geo {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#geo");
+    }
+  }
+
+  &--sheet {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#sheet");
+    }
+  }
+
+  &--bell {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#bell");
+    }
+  }
+}
+
+.advantages__title {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.advantages__text {
+  font-family: $FuturaDemic;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 125%;
+  text-align: center;
+  padding-top: 19px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 111%;
+    padding-top: 20px;
+  }
+}

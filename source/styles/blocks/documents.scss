@@ -1,0 +1,32 @@
+.documents {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 20px;
+  padding: 30px 0 41px;
+
+  @media (min-width: $desktop-width) {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, max-content);
+    padding: 9px 0 0;
+    column-gap: 41px;
+  }
+}
+
+.documents__link {
+  font-size: 13px;
+  letter-spacing: -0.05em;
+  color: $grey;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
