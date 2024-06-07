@@ -1,5 +1,7 @@
 .promotions {
-  background-color: $soft-grey;
+  @media (min-width: $desktop-width) {
+    background-color: $soft-grey;
+  }
 }
 
 .promotions__container {
@@ -47,20 +49,20 @@
   }
 }
 .promotions__wrapper {
-  @media (max-width: 1289px) {
-    display: none;
-  }
-
   display: flex;
   position: relative;
 }
 
 .promotions__image {
-  display: block;
-  max-width: 522px;
-  width: 100%;
+  display: none;
 
-  position: absolute;
-  top: -272px;
-  left: 695px;
+  @media (min-width: $desktop-width) {
+    display: block;
+    max-width: 522px;
+    width: 100%;
+
+    position: absolute;
+    top: -272px;
+    left: 695px;
+  }
 }
